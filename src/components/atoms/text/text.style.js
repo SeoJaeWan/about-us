@@ -1,0 +1,1 @@
+const TextStyle = styled.p``;
