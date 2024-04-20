@@ -19,6 +19,8 @@ const border = css`
   border-color: ${(props) => props.$borderColor};
   border-style: ${(props) => props.$borderStyle};
   border-radius: ${(props) => props.$radius};
+
+  box-shadow: ${(props) => props.$boxShadow};
 `;
 
 export default border;

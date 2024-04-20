@@ -9,6 +9,9 @@ const size = css`
 
   min-width: ${(props) => props.$minWidth};
   min-height: ${(props) => props.$minHeight};
+
+  aspect-ratio: ${(props) => props.$aspectRatio};
+  object-fit: ${(props) => props.$objectFit};
 `;
 
 export default size;
