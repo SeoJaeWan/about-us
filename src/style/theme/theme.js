@@ -20,3 +20,9 @@ export const color = {
     background: "#f5f6fa",
   },
 };
+
+export const media = {
+  mobile: 767,
+  tablet: 1024,
+  notebook: 1680,
+};

@@ -29,6 +29,18 @@ const position = css`
   ${(props) => props.$isCenterX && centerX}
 
   z-index: ${(props) => props.$zIndex};
+
+  /* mobile */
+  @media (max-width: ${(props) => props.theme.mobile}) {
+  }
+
+  /* tablet */
+  @media (max-width: ${(props) => props.theme.tablet}) {
+  }
+
+  /* notebook */
+  @media (max-width: ${(props) => props.theme.notebook}) {
+  }
 `;
 
 export default position;

@@ -12,6 +12,18 @@ const size = css`
 
   aspect-ratio: ${(props) => props.$aspectRatio};
   object-fit: ${(props) => props.$objectFit};
+
+  /* mobile */
+  @media (max-width: ${(props) => props.theme.mobile}) {
+  }
+
+  /* tablet */
+  @media (max-width: ${(props) => props.theme.tablet}) {
+  }
+
+  /* notebook */
+  @media (max-width: ${(props) => props.theme.notebook}) {
+  }
 `;
 
 export default size;
