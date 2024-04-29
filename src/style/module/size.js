@@ -1,29 +1,19 @@
 import { css } from "styled-components";
+import generateMediaResponsiveStyles from "./utils/helper";
+
+const sizeProperties = [
+  { key: "width", value: "width" },
+  { key: "height", value: "height" },
+  { key: "max-width", value: "maxWidth" },
+  { key: "max-height", value: "maxHeight" },
+  { key: "min-width", value: "minWidth" },
+  { key: "min-height", value: "minHeight" },
+  { key: "aspect-ratio", value: "aspectRatio" },
+  { key: "object-fit", value: "objectFit" },
+];
 
 const size = css`
-  width: ${(props) => props.$width};
-  height: ${(props) => props.$height};
-
-  max-width: ${(props) => props.$maxWidth};
-  max-height: ${(props) => props.$maxHeight};
-
-  min-width: ${(props) => props.$minWidth};
-  min-height: ${(props) => props.$minHeight};
-
-  aspect-ratio: ${(props) => props.$aspectRatio};
-  object-fit: ${(props) => props.$objectFit};
-
-  /* mobile */
-  @media (max-width: ${(props) => props.theme.mobile}) {
-  }
-
-  /* tablet */
-  @media (max-width: ${(props) => props.theme.tablet}) {
-  }
-
-  /* notebook */
-  @media (max-width: ${(props) => props.theme.notebook}) {
-  }
+  ${generateMediaResponsiveStyles(sizeProperties)}
 `;
 
 export default size;

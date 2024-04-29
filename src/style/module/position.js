@@ -1,4 +1,11 @@
 import { css } from "styled-components";
+import generateMediaResponsiveStyles from "./utils/helper";
+
+const center = css`
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+`;
 
 const centerY = css`
   top: 50%;
@@ -10,37 +17,21 @@ const centerX = css`
   transform: translateX(-50%);
 `;
 
-const center = css`
-  top: 50%;
-  left: 50%;
-
-  transform: translate(-50%, -50%);
-`;
+const positionProperties = [
+  { key: "position", value: "position" },
+  { key: "top", value: "top" },
+  { key: "left", value: "left" },
+  { key: "bottom", value: "bottom" },
+  { key: "right", value: "right" },
+  { key: "z-index", value: "zIndex" },
+];
 
 const position = css`
-  position: ${(props) => props.$position};
-  top: ${(props) => props.$top};
-  left: ${(props) => props.$left};
-  bottom: ${(props) => props.$bottom};
-  right: ${(props) => props.$right};
+  ${generateMediaResponsiveStyles(positionProperties)}
 
   ${(props) => props.$isCenter && center}
   ${(props) => props.$isCenterY && centerY}
   ${(props) => props.$isCenterX && centerX}
-
-  z-index: ${(props) => props.$zIndex};
-
-  /* mobile */
-  @media (max-width: ${(props) => props.theme.mobile}) {
-  }
-
-  /* tablet */
-  @media (max-width: ${(props) => props.theme.tablet}) {
-  }
-
-  /* notebook */
-  @media (max-width: ${(props) => props.theme.notebook}) {
-  }
 `;
 
 export default position;

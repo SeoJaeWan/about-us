@@ -1,20 +1,13 @@
 import { css } from "styled-components";
+import generateMediaResponsiveStyles from "./utils/helper";
+
+const transformProperties = [
+  { key: "transform", value: "transform" },
+  { key: "translate", value: "translate" },
+];
 
 const transform = css`
-  transform: ${(props) => props.$transform};
-  transition: ${(props) => props.transition};
-
-  /* mobile */
-  @media (max-width: ${(props) => props.theme.mobile}) {
-  }
-
-  /* tablet */
-  @media (max-width: ${(props) => props.theme.tablet}) {
-  }
-
-  /* notebook */
-  @media (max-width: ${(props) => props.theme.notebook}) {
-  }
+  ${generateMediaResponsiveStyles(transformProperties)}
 `;
 
 export default transform;

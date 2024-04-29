@@ -1,21 +1,14 @@
 import { css } from "styled-components";
+import generateMediaResponsiveStyles from "./utils/helper";
+
+const overflowProperties = [
+  { key: "overflow", value: "overflow" },
+  { key: "overflow-x", value: "overflowX" },
+  { key: "overflow-y", value: "overflowY" },
+];
 
 const overflow = css`
-  overflow: ${(props) => props.$overflow};
-  overflow-x: ${(props) => props.$overflowX};
-  overflow-y: ${(props) => props.$overflowY};
-
-  /* mobile */
-  @media (max-width: ${(props) => props.theme.mobile}) {
-  }
-
-  /* tablet */
-  @media (max-width: ${(props) => props.theme.tablet}) {
-  }
-
-  /* notebook */
-  @media (max-width: ${(props) => props.theme.notebook}) {
-  }
+  ${generateMediaResponsiveStyles(overflowProperties)}
 `;
 
 export default overflow;

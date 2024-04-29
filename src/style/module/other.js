@@ -1,20 +1,13 @@
 import { css } from "styled-components";
+import { generateMediaResponsiveStyles } from "./utils/helper";
+
+const otherProperties = [
+  { key: "visibility", value: "visibility" },
+  { key: "cursor", value: "cursor" },
+];
 
 const Other = css`
-  visibility: ${(props) => props.$visibility};
-  cursor: ${(props) => props.$cursor};
-
-  /* mobile */
-  @media (max-width: ${(props) => props.theme.mobile}) {
-  }
-
-  /* tablet */
-  @media (max-width: ${(props) => props.theme.tablet}) {
-  }
-
-  /* notebook */
-  @media (max-width: ${(props) => props.theme.notebook}) {
-  }
+  ${generateMediaResponsiveStyles(otherProperties)}
 `;
 
 export default Other;
