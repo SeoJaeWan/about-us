@@ -3,29 +3,66 @@ import { css } from "styled-components";
 
 const generateResponsiveStyles = (properties) => css`
   ${(props) =>
-    properties.reduce((acc, { key, value, isClamp }) => {
-      if (!props[`$${value}`]) return acc;
+    properties.reduce(
+      (acc, { key, value, isClamp, isCenter, isCenterX, isCenterY }) => {
+        const styleValue = props[`$${value}`];
 
-      if (isClamp && props[`$${value}`]) {
-        return (
-          acc +
-          `
+        if (!styleValue) return acc;
+
+        if (isCenter && styleValue) {
+          return (
+            acc +
+            `
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            `
+          );
+        }
+
+        if (isCenterX && styleValue) {
+          return (
+            acc +
+            `
+            left: 50%;
+            transform: translateX(-50%);
+            `
+          );
+        }
+
+        if (isCenterY && styleValue) {
+          return (
+            acc +
+            `
+            top: 50%;
+            transform: translateY(-50%);    
+            `
+          );
+        }
+
+        if (isClamp && styleValue) {
+          return (
+            acc +
+            `
           ${key}: ellipsis;
           overflow: hidden;
           display: -webkit-box;
           -webkit-box-orient: vertical;
-          -webkit-line-clamp: ${props[`$${value}`]};
+          -webkit-line-clamp: ${styleValue};
           display: -moz-box;
           -moz-box-orient: vertical;
-          -moz-line-clamp: ${props[`$${value}`]};
+          -moz-line-clamp: ${styleValue};
           display: -ms-box;
           -ms-box-orient: vertical;
-          -ms-line-clamp: ${props[`$${value}`]};
+          -ms-line-clamp: ${styleValue};
         `
-        );
-      }
-      return acc + `${key}: ${props[`$${value}`]};`;
-    }, "")}
+          );
+        }
+        return acc + `${key}: ${styleValue};`;
+      },
+      ""
+    )}
 `;
 
 const toValueUpperCase = (value) => {

@@ -1,5 +1,5 @@
 import { css } from "styled-components";
-import { generateMediaResponsiveStyles } from "./utils/helper";
+import generateMediaResponsiveStyles from "./utils/helper";
 
 // Define properties for border styles
 const borderProperties = [
