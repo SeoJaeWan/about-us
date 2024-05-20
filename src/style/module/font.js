@@ -1,5 +1,5 @@
 import { css } from "styled-components";
-import { generateMediaResponsiveStyles } from "./utils/helper";
+import generateMediaResponsiveStyles from "./utils/helper";
 
 const fontProperties = [
   { key: "color", value: "color" },
