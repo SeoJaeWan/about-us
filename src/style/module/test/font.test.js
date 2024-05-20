@@ -74,7 +74,7 @@ describe("Font", () => {
     ["tablet", tabletTestProps, convertTabletProps, media.tablet],
     ["mobile", mobileTestProps, convertMobileProps, media.mobile],
   ])(
-    "Display 반응형 테스트 - %s  - 미디어쿼리에 테마로 지정한 사이즈의 쿼리가 설정된다.",
+    "Font 반응형 테스트 - %s  - 미디어쿼리에 테마로 지정한 사이즈의 쿼리가 설정된다.",
     (device, props, convert, mediaQuery) => {
       render(
         <Theme>

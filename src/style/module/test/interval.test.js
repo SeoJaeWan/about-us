@@ -1,63 +1,62 @@
 import styled from "styled-components";
-import display from "../display";
+import interval from "../interval";
 import { render, screen } from "@testing-library/react";
 import { media } from "@/style/theme/theme";
 import Theme from "@/lib/theme";
 
-const DisplayStyle = styled.div`
-  ${display}
+const IntervalStyle = styled.div`
+  ${interval}
 `;
 
 const testProps = {
-  $display: "flex",
-  $justifyContent: "flex-start",
-  $alignItems: "flex-end",
+  $margin: "10px 20px",
+  $padding: "20px 10px",
 };
 
 const notebookTestProps = {
-  $notebookDisplay: "flex",
+  $notebookMargin: "10px 10px 10px 10px",
 };
 
 const convertNotebookProps = {
-  $notebookDisplay: "display",
+  $notebookMargin: "margin",
 };
 
 const tabletTestProps = {
-  $tabletDisplay: "flex",
+  $tabletMargin: "10px 10px 10px 10px",
 };
 
 const convertTabletProps = {
-  $tabletDisplay: "display",
+  $tabletMargin: "margin",
 };
 
 const mobileTestProps = {
-  $mobileDisplay: "flex",
+  $mobileMargin: "10px 10px 10px 10px",
 };
 
 const convertMobileProps = {
-  $mobileDisplay: "display",
+  $mobileMargin: "margin",
 };
 
-describe("Display", () => {
-  it("Display 렌더링 테스트 - display 속성을 포함한 컴포넌트가 문제없이 렌더링 된다.", () => {
+describe("Interval", () => {
+  it("Interval 렌더링 테스트 - interval 속성을 포함한 컴포넌트가 문제없이 렌더링 된다.", () => {
     render(
       <Theme>
-        <DisplayStyle>display</DisplayStyle>
+        <IntervalStyle>interval</IntervalStyle>
       </Theme>
     );
 
-    expect(screen.getByText("display")).toBeInTheDocument();
+    expect(screen.getByText("interval")).toBeInTheDocument();
   });
 
-  it("Display 속성 테스트- display 가지고 있는 속성들이 제대로 적용이 된다.", () => {
+  it("Interval 속성 테스트 - interval 가지고 있는 속성들이 제대로 적용이 된다.", () => {
     render(
       <Theme>
-        <DisplayStyle {...testProps}>display</DisplayStyle>
+        <IntervalStyle {...testProps}>interval</IntervalStyle>
       </Theme>
     );
 
-    const displayElement = screen.getByText("display");
-    const computedStyles = getComputedStyle(displayElement);
+    const colorElement = screen.getByText("interval");
+    const computedStyles = getComputedStyle(colorElement);
 
     Object.entries(testProps).forEach(([key, value]) => {
       const cssProperty = key.substring(1);
@@ -71,16 +70,16 @@ describe("Display", () => {
     ["tablet", tabletTestProps, convertTabletProps, media.tablet],
     ["mobile", mobileTestProps, convertMobileProps, media.mobile],
   ])(
-    "Display 반응형 테스트 - %s  - 미디어쿼리에 테마로 지정한 사이즈의 쿼리가 설정된다.",
+    "Interval 반응형 테스트 - %s  - 미디어쿼리에 테마로 지정한 사이즈의 쿼리가 설정된다.",
     (device, props, convert, mediaQuery) => {
       render(
         <Theme>
-          <DisplayStyle {...props}>display</DisplayStyle>
+          <IntervalStyle {...props}>interval</IntervalStyle>
         </Theme>
       );
 
       Object.entries(props).forEach(([key, value]) => {
-        expect(screen.getByText("display")).toHaveStyleRule(
+        expect(screen.getByText("interval")).toHaveStyleRule(
           convert[key],
           value,
           {
