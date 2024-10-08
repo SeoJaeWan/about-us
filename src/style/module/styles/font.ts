@@ -1,7 +1,4 @@
-import { css } from "styled-components";
-import generateMediaResponsiveStyles from "./utils/helper";
-
-const fontProperties = [
+const font = [
   { key: "color", value: "color" },
   { key: "font-weight", value: "fontWeight" },
   { key: "text-align", value: "textAlign" },
@@ -12,9 +9,5 @@ const fontProperties = [
   { key: "letter-spacing", value: "letterSpace" },
   { key: "line-clamp", value: "lineClamp", isClamp: true },
 ];
-
-const font = css`
-  ${generateMediaResponsiveStyles(fontProperties)}
-`;
 
 export default font;

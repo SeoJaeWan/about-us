@@ -1,7 +1,4 @@
-import { css } from "styled-components";
-import generateMediaResponsiveStyles from "./utils/helper";
-
-const backgroundProperties = [
+const background = [
   { key: "background", value: "background" },
   { key: "background-color", value: "backgroundColor" },
   { key: "background-image", value: "backgroundImage" },
@@ -9,9 +6,5 @@ const backgroundProperties = [
   { key: "background-repeat", value: "backgroundRepeat" },
   { key: "background-size", value: "backgroundSize" },
 ];
-
-const background = css`
-  ${generateMediaResponsiveStyles(backgroundProperties)}
-`;
 
 export default background;

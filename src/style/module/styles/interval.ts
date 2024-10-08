@@ -1,7 +1,4 @@
-import { css } from "styled-components";
-import generateMediaResponsiveStyles from "./utils/helper";
-
-const intervalProperties = [
+const interval = [
   { key: "margin", value: "margin" },
   { key: "margin-top", value: "marginTop" },
   { key: "margin-right", value: "marginRight" },
@@ -13,9 +10,5 @@ const intervalProperties = [
   { key: "padding-bottom", value: "paddingBottom" },
   { key: "padding-left", value: "paddingLeft" },
 ];
-
-const interval = css`
-  ${generateMediaResponsiveStyles(intervalProperties)}
-`;
 
 export default interval;

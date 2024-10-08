@@ -1,7 +1,4 @@
-import { css } from "styled-components";
-import generateMediaResponsiveStyles from "./utils/helper";
-
-const sizeProperties = [
+const size = [
   { key: "width", value: "width" },
   { key: "height", value: "height" },
   { key: "max-width", value: "maxWidth" },
@@ -11,9 +8,5 @@ const sizeProperties = [
   { key: "aspect-ratio", value: "aspectRatio" },
   { key: "object-fit", value: "objectFit" },
 ];
-
-const size = css`
-  ${generateMediaResponsiveStyles(sizeProperties)}
-`;
 
 export default size;

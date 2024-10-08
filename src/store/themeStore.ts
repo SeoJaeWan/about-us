@@ -3,7 +3,14 @@ import { create } from "zustand";
 export const Black = "black";
 export const White = "white";
 
-const useThemeStore = create((set, get) => ({
+type ThemeState = {
+  theme: boolean;
+
+  toggleTheme: () => void;
+  getTheme: () => string;
+};
+
+const useThemeStore = create<ThemeState>((set, get) => ({
   theme: true,
 
   toggleTheme: () => set((state) => ({ theme: !state.theme })),

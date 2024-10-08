@@ -1,8 +1,8 @@
 import { css } from "styled-components";
-import generateMediaResponsiveStyles from "./utils/helper";
+import generateMediaResponsiveStyles from "../utils/helper";
 
 // Define properties for border styles
-const borderProperties = [
+const border = [
   { key: "border", value: "border" },
   { key: "border-width", value: "borderWidth" },
   { key: "border-top", value: "borderTop" },
@@ -18,9 +18,5 @@ const borderProperties = [
   { key: "border-radius", value: "borderRadius" },
   { key: "box-shadow", value: "boxShadow" },
 ];
-
-const border = css`
-  ${generateMediaResponsiveStyles(borderProperties)}
-`;
 
 export default border;
