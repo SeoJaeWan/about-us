@@ -8,8 +8,14 @@ type StyleProperty = {
   value: string;
 };
 
+type Props = Record<string, any>;
+
 const lowerFirstLetter = (value: string) => {
   return value.charAt(0).toLowerCase() + value.slice(1);
+};
+
+export type GetStyleProps = {
+  getStyleProps: (props: Props) => Props;
 };
 
 const createStyle = (styles: StyleProperty[][]) => {
@@ -24,7 +30,7 @@ const createStyle = (styles: StyleProperty[][]) => {
     {}
   );
 
-  const getStyleProps = (props: Record<string, any>) => {
+  const getStyleProps = (props: Props): Props => {
     return Object.entries(props).reduce((acc, [key, value]) => {
       const property = styleProperties.find((style) => {
         return style.value === key;

@@ -1,6 +1,8 @@
 "use client";
 
+import About from "@/components/organisms/about/about";
 import Intro from "@/components/organisms/intro/intro";
+import Portfolio from "@/components/organisms/portfolio/portfolio";
 
 const Home = () => {
   return (
@@ -9,10 +11,10 @@ const Home = () => {
       <Intro />
 
       {/* About */}
-      <article></article>
+      <About />
 
       {/* Portfolio */}
-      <article></article>
+      <Portfolio />
 
       {/* Blog */}
       <article></article>

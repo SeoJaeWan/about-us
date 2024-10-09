@@ -1,4 +1,4 @@
-import createStyle from "@/style/module/createStyle";
+import createStyle, { GetStyleProps } from "@/style/module/createStyle";
 import display from "@/style/module/styles/display";
 import interval from "@/style/module/styles/interval";
 import size from "@/style/module/styles/size";
@@ -10,4 +10,10 @@ const LayoutContainer = styled.div`
   ${cssStyle}
 `;
 
-export default LayoutContainer;
+type LayoutStyleType = typeof LayoutContainer & GetStyleProps;
+
+const LayoutStyle = LayoutContainer as LayoutStyleType;
+
+LayoutStyle.getStyleProps = getStyleProps;
+
+export default LayoutStyle;
