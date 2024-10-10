@@ -1,3 +1,4 @@
+"use client";
 import LayoutStyle from "./layout.style";
 
 const Layout = (props) => {

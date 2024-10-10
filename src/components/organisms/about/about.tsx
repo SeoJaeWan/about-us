@@ -9,7 +9,7 @@ const About = () => {
         <Image src={Profile} alt={""} />
       </div>
       <div>
-        <h2>About SEOJAEWAN</h2>
+        <h2>ABOUT SeoJaeWan</h2>
         <p>
           안녕하세요! 프론트엔드 개발자 서재완입니다.
           <br />

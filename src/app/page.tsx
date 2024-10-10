@@ -1,6 +1,6 @@
-"use client";
-
 import About from "@/components/organisms/about/about";
+import Blog from "@/components/organisms/blog/blog";
+import Contact from "@/components/organisms/contact/contact";
 import Intro from "@/components/organisms/intro/intro";
 import Portfolio from "@/components/organisms/portfolio/portfolio";
 
@@ -17,10 +17,10 @@ const Home = () => {
       <Portfolio />
 
       {/* Blog */}
-      <article></article>
+      <Blog />
 
       {/* Contact */}
-      <article></article>
+      <Contact />
     </main>
   );
 };
