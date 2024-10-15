@@ -1,4 +1,4 @@
-import Layout from "@/components/atoms/layout/layout";
+import Layout from "@/components/atoms/common/layout/layout";
 import Image from "next/image";
 import Profile from "@/assets/images/profile.png";
 

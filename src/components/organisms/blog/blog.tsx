@@ -1,4 +1,4 @@
-import Layout from "@/components/atoms/layout/layout";
+import Layout from "@/components/atoms/common/layout/layout";
 import dayjs from "dayjs";
 
 const getBlogRss = async () => {

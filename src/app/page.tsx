@@ -11,16 +11,16 @@ const Home = () => {
       <Intro />
 
       {/* About */}
-      <About />
+      {/* <About /> */}
 
       {/* Portfolio */}
-      <Portfolio />
+      {/* <Portfolio /> */}
 
       {/* Blog */}
-      <Blog />
+      {/* <Blog /> */}
 
       {/* Contact */}
-      <Contact />
+      {/* <Contact /> */}
     </main>
   );
 };
