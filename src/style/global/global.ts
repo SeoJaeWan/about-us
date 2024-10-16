@@ -12,7 +12,9 @@ const GlobalStyle = createGlobalStyle`
         font-family: var(--font-pretendard); 
     }
 
-  
+    a {
+        text-decoration: none;
+    }
 `;
 
 export default GlobalStyle;

@@ -6,7 +6,7 @@ import styled from "styled-components";
 
 const { cssStyle, getStyleProps } = createStyle([interval, font]);
 
-const ContentContainer = styled.span`
+const ContentContainer = styled.p`
   display: block;
 
   margin: 20px 0;

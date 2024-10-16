@@ -5,6 +5,7 @@ const HeaderStyle = styled.header`
   position: fixed;
   top: 4vw;
   left: 0;
+  z-index: 2;
 
   width: 100vw;
   height: ${toRem(46)};
@@ -12,6 +13,8 @@ const HeaderStyle = styled.header`
   padding: 0 5vw;
   font-size: ${toRem(16)};
   font-weight: 600;
+
+  background-color: white;
 
   div {
     display: flex;

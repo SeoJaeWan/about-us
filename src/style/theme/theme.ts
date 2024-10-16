@@ -21,6 +21,10 @@ export const color = {
   },
 };
 
+export const realColor = {
+  black: "#000",
+};
+
 export const media = {
   mobile: 767,
   tablet: 1024,
