@@ -3,12 +3,14 @@ import Layout from "@/components/atoms/common/layout/layout";
 import toRem from "@/style/utils/toRem";
 import IntroImage from "@/components/molecules/intro/introImage/introImage";
 import FadeUp from "@/components/atoms/common/fadeUp/fadeUp";
+import { realColor } from "@/style/theme/theme";
 
 const Intro = () => {
   return (
     <Layout
       as="article"
-      padding={`calc(${toRem(46)} + 4vw + ${toRem(100)}) 5vw`}
+      padding={`calc(${toRem(46)} + 4vw + ${toRem(180)}) 5vw`}
+      backgroundColor={realColor.white}
     >
       <IntroImage />
 

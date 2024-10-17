@@ -11,8 +11,18 @@ import ToGo from "@/components/atoms/common/toGo/toGo";
 
 const About = () => {
   return (
-    <Layout display={"flex"} justifyContent={"center"} padding={"5vw"}>
-      <Layout width={"40%"} display={"flex"} justifyContent={"center"}>
+    <Layout
+      display={"flex"}
+      justifyContent={"center"}
+      padding={"10vw 5vw"}
+      backgroundColor={realColor.white}
+    >
+      <Layout
+        width={"40%"}
+        maxWidth={toRem(500)}
+        display={"flex"}
+        justifyContent={"center"}
+      >
         <Image
           src={Profile}
           alt={""}

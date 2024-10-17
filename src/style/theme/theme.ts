@@ -23,6 +23,7 @@ export const color = {
 
 export const realColor = {
   black: "#000",
+  white: "#fff",
 };
 
 export const media = {
