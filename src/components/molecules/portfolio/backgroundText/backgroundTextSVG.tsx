@@ -1,12 +1,6 @@
 const BackgroundTextSVG = () => {
   return (
-    <svg
-      width="100%"
-      height="auto"
-      viewBox="0 0 685 98"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-    >
+    <svg viewBox="0 0 685 98" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path
         d="M635.442 27.0909H647.498L659.107 49.0156H659.604L671.212 27.0909H683.268L664.7 60.0028V78H654.011V60.0028L635.442 27.0909Z"
         fill="black"

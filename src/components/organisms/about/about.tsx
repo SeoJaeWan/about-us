@@ -46,6 +46,7 @@ const About = () => {
           <Image
             display={"inline-block"}
             src={Logo}
+            alt={"SeoJaeWan"}
             width={"auto"}
             height={"19px"}
             aspectRatio={"899/147"}

@@ -16,6 +16,11 @@ const BackgroundTextStyle = styled.div`
   width: 100%;
 
   padding: ${toRem(10)};
+
+  svg {
+    width: 100%;
+    height: auto;
+  }
 `;
 
 export default BackgroundTextStyle;
