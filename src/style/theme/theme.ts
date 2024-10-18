@@ -24,7 +24,7 @@ export const color = {
 export const realColor = {
   black: "#000",
   white: "#fff",
-  gray1: "#dcdde1",
+  gray1: "#576574",
   gray2: "#576574",
   shadow: "#f1f2f6",
 };

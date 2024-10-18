@@ -5,14 +5,19 @@ import { StyleProps } from "@/style/module/createStyle";
 
 type TitleProps = {
   children: ReactNode;
+  as?: string;
 } & StyleProps;
 
 const Title = (props: TitleProps) => {
-  const { children } = props;
+  const { as = "h2", children } = props;
 
   const styleProps = TitleStyle.getStyleProps(props);
 
-  return <TitleStyle {...styleProps}>{children}</TitleStyle>;
+  return (
+    <TitleStyle as={as} {...styleProps}>
+      {children}
+    </TitleStyle>
+  );
 };
 
 export default Title;

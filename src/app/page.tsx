@@ -1,8 +1,8 @@
-import About from "@/components/organisms/about/about";
-import Blog from "@/components/organisms/blog/blog";
-import Contact from "@/components/organisms/contact/contact";
-import Intro from "@/components/organisms/intro/intro";
-import Portfolio from "@/components/organisms/portfolio/portfolio";
+import About from "@/components/templates/about/about";
+import Blog from "@/components/templates/blog/blog";
+import Contact from "@/components/templates/contact/contact";
+import Intro from "@/components/templates/intro/intro";
+import Portfolio from "@/components/templates/portfolio/portfolio";
 
 const Home = () => {
   return (
@@ -17,7 +17,7 @@ const Home = () => {
       <Portfolio />
 
       {/* Blog */}
-      {/* <Blog /> */}
+      <Blog />
 
       {/* Contact */}
       {/* <Contact /> */}

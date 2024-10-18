@@ -1,4 +1,4 @@
-import Content from "@/components/atoms/intro/content/content";
+import Content from "@/components/atoms/common/content/content";
 import Layout from "@/components/atoms/common/layout/layout";
 import toRem from "@/style/utils/toRem";
 import IntroImage from "@/components/molecules/intro/introImage/introImage";

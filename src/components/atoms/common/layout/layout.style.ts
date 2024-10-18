@@ -1,5 +1,6 @@
 import createStyle, { GetStyleProps } from "@/style/module/createStyle";
 import background from "@/style/module/styles/background";
+import border from "@/style/module/styles/border";
 import display from "@/style/module/styles/display";
 import interval from "@/style/module/styles/interval";
 import position from "@/style/module/styles/position";
@@ -9,6 +10,7 @@ import styled from "styled-components";
 const { cssStyle, getStyleProps } = createStyle([
   position,
   display,
+  border,
   interval,
   size,
   background,

@@ -1,13 +1,13 @@
 "use client";
 import Layout from "@/components/atoms/common/layout/layout";
 import Profile from "@/assets/images/profile.png";
-import Logo from "@/assets/images/logo.svg";
 import Image from "@/components/atoms/common/image/image";
 import toRem from "@/style/utils/toRem";
 import { realColor } from "@/style/theme/theme";
-import Title from "@/components/atoms/intro/title/title";
-import Content from "@/components/atoms/intro/content/content";
+import Title from "@/components/atoms/common/title/title";
+import Content from "@/components/atoms/common/content/content";
 import ToGo from "@/components/atoms/common/toGo/toGo";
+import Logo from "@/components/molecules/common/logo/logo";
 
 const About = () => {
   return (
@@ -43,14 +43,7 @@ const About = () => {
           letterSpacing={toRem(-2)}
         >
           ABOUT
-          <Image
-            display={"inline-block"}
-            src={Logo}
-            alt={"SeoJaeWan"}
-            width={"auto"}
-            height={"19px"}
-            aspectRatio={"899/147"}
-          />
+          <Logo width={"auto"} height={"19px"} />
         </Title>
         <Content lineHeight={toRem(30)}>
           안녕하세요. 프론트엔드 개발자 서재완입니다!

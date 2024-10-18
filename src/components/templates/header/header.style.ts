@@ -14,7 +14,7 @@ const HeaderStyle = styled.header`
   font-size: ${toRem(16)};
   font-weight: 600;
 
-  background-color: white;
+  /* background-color: white; */
 
   div {
     display: flex;

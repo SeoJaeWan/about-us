@@ -1,5 +1,5 @@
-import Footer from "@/components/organisms/footer/footer";
-import Header from "@/components/organisms/header/header";
+import Footer from "@/components/templates/footer/footer";
+import Header from "@/components/templates/header/header";
 import StyledComponentsRegistry from "@/lib/registry";
 import Theme from "@/lib/theme";
 import localFont from "next/font/local";
