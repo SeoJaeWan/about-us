@@ -9,6 +9,12 @@ const ContentContainer = styled.li`
   &:last-child {
     border-bottom: none;
   }
+
+  &:nth-child(2n) {
+    a {
+      flex-direction: row-reverse;
+    }
+  }
 `;
 
 const ContentBox = styled(Link)`

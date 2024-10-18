@@ -79,7 +79,7 @@ const PortfolioItemInfoBox = styled.div`
     display: flex;
     align-items: flex-start;
 
-    font-size: ${toRem(45)};
+    font-size: ${toRem(40)};
     font-weight: 700;
     color: ${realColor.black};
 
