@@ -1,24 +1,58 @@
+import Content from "@/components/atoms/common/content/content";
 import Layout from "@/components/atoms/common/layout/layout";
+import SubTitle from "@/components/atoms/common/subTitle/subTitle";
+import Title from "@/components/atoms/common/title/title";
+import ToGo from "@/components/atoms/common/toGo/toGo";
+import { realColor } from "@/style/theme/theme";
+import toRem from "@/style/utils/toRem";
 
 const Contact = () => {
   return (
-    <Layout padding={"0 5vw"}>
-      <h2>CONTACT</h2>
+    <Layout
+      as="article"
+      display={"flex"}
+      flexDirection={"column"}
+      alignItems={"flex-start"}
+      justifyContent={"center"}
+      height={"100vh"}
+      padding={"0 12vw"}
+      backgroundColor={realColor.white}
+    >
+      <Title fontSize={toRem(18)} fontWeight={500} color={realColor.gray1}>
+        CONTACT
+      </Title>
+      <Content>서재완에 대해 더 알고 싶으신가요?</Content>
+      <SubTitle fontSize={toRem(100)}>sjw7324@gmail.com</SubTitle>
+      <Layout
+        display={"flex"}
+        gap={"50px"}
+        width={"100%"}
+        marginTop={toRem(50)}
+      >
+        <Layout width={"calc(100% / 2 - 30px)"}>
+          <Content lineHeight={toRem(30)}>
+            성장 중인 개발자를 찾으시나요? 언제나 새로운 도전을 두려워하지 않는
+            개발자입니다. 메일을 보내주시면 1~2일 내로 성심성의껏 확인하고
+            답장드리겠습니다. 함께할 수 있길 기대합니다.
+          </Content>
 
-      <p>서재완에 대해 더 알고 싶으신가요?</p>
-      <strong>sjw7324@gmail.com</strong>
-      <p>
-        성장 중인 개발자를 찾으시나요? 언제든지 연락 주세요! 메일을 보내주시면
-        1~2일 내로 답장드리겠습니다.
-      </p>
+          <ToGo href="sjw7324@gmail.com">메일 보내기</ToGo>
+        </Layout>
 
-      <p>
-        인간 서재완이 궁금하셔도 좋아요. 커피챗 중독자로서 언제든지 대화를 나눌
-        준비가 되어 있어요.
-      </p>
-      <p>
-        현재 거주지 : <strong>대구</strong>
-      </p>
+        <Layout width={"calc(100% / 2 - 30px)"}>
+          <Content lineHeight={toRem(30)}>
+            인간 서재완이 궁금하셔도 좋아요. 커피챗 중독자로서 언제든지 대화를
+            나눌 준비가 되어 있어요. 대화를 통해 서로 배우고 성장할 수 있는
+            기회라면 언제든 환영입니다.
+          </Content>
+
+          <Content fontSize={toRem(16)}>
+            현재 거주지 : <strong>대구</strong>
+          </Content>
+        </Layout>
+      </Layout>
+
+      <p></p>
     </Layout>
   );
 };

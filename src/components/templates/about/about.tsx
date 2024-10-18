@@ -12,6 +12,7 @@ import Logo from "@/components/molecules/common/logo/logo";
 const About = () => {
   return (
     <Layout
+      as="article"
       display={"flex"}
       justifyContent={"center"}
       padding={"10vw 5vw"}

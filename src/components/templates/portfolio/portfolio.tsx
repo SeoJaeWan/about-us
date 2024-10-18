@@ -68,7 +68,7 @@ const portfolioList = [
 
 const Portfolio = () => {
   return (
-    <Layout position={"relative"} padding={"10vw 15vw"}>
+    <Layout as="article" position={"relative"} padding={"10vw 15vw"}>
       <BackgroundText />
       <Layout
         display={"flex"}

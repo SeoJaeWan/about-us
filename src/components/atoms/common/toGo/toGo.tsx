@@ -1,3 +1,4 @@
+"use client";
 import Image from "next/image";
 import ToGoStyle from "./toGo.style";
 import TogoIcon from "@/assets/images/toGo.svg";

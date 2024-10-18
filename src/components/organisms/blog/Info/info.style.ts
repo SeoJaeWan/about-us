@@ -7,7 +7,7 @@ const InfoContainer = styled.div`
   top: 0;
   left: 0;
 
-  padding: 25vh 5vw 25vw;
+  padding: 25vh 5vw 0;
 
   width: 40%;
   height: 100vh;

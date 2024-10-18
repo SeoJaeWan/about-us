@@ -20,7 +20,7 @@ const Home = () => {
       <Blog />
 
       {/* Contact */}
-      {/* <Contact /> */}
+      <Contact />
     </main>
   );
 };
