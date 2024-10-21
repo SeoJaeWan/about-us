@@ -3,10 +3,6 @@ import toRem from "@/style/utils/toRem";
 import Link from "next/link";
 import styled from "styled-components";
 
-type PortfolioItemContainerProps = {
-  $isLeft: boolean;
-};
-
 const PortfolioItemLink = styled(Link)`
   display: flex;
   flex-direction: column;
@@ -30,9 +26,7 @@ const PortfolioItemShadow = styled.div`
   opacity: 0.8;
 `;
 
-const PortfolioItemContainer = styled.li<PortfolioItemContainerProps>`
-  align-self: ${(props) => (props.$isLeft ? "flex-start" : "flex-end")};
-
+const PortfolioItemContainer = styled.li`
   position: relative;
 
   width: ${toRem(400)};
@@ -40,6 +34,26 @@ const PortfolioItemContainer = styled.li<PortfolioItemContainerProps>`
 
   &:hover ${PortfolioItemShadow} {
     opacity: 0.9;
+  }
+
+  &:nth-child(1) {
+    left: ${toRem(-200)};
+  }
+
+  &:nth-child(2) {
+    left: ${toRem(300)};
+  }
+
+  &:nth-child(3) {
+    left: ${toRem(-350)};
+  }
+
+  &:nth-child(4) {
+    left: ${toRem(420)};
+  }
+
+  &:nth-child(5) {
+    left: ${toRem(-200)};
   }
 `;
 

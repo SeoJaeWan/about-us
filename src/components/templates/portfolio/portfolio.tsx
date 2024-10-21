@@ -73,6 +73,7 @@ const Portfolio = () => {
       <Layout
         display={"flex"}
         flexDirection={"column"}
+        alignItems={"center"}
         as={"ul"}
         padding={`${toRem(400)} 0`}
       >
@@ -83,7 +84,6 @@ const Portfolio = () => {
             href={href}
             backgroundColor={backgroundColor}
             key={idx}
-            index={idx}
           />
         ))}
       </Layout>

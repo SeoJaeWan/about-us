@@ -16,18 +16,15 @@ type PortfolioItemProps = {
   };
   src: StaticImageData;
   href: string;
-  index: number;
   backgroundColor: string;
 };
 
 const PortfolioItem = (props: PortfolioItemProps) => {
-  const { info, src, href, backgroundColor, index } = props;
+  const { info, src, href, backgroundColor } = props;
   const { name, year, spec, company } = info;
 
-  const isLeft = index % 2 === 0;
-
   return (
-    <PortfolioItemStyle $isLeft={isLeft}>
+    <PortfolioItemStyle>
       <PortfolioItemStyle.Link href={href} target={"_blank"}>
         <PortfolioItemStyle.ImageBox $backgroundColor={backgroundColor}>
           <Image src={src} alt={""} width={"auto"} height={toRem(180)} />

@@ -12,7 +12,7 @@ const InfoContainer = styled.div`
   width: 40%;
   height: 100vh;
 
-  background-color: #dff9fb;
+  background-color: ${realColor.background};
 `;
 
 const InfoStyleHeader = styled.h2`
