@@ -3,17 +3,19 @@ import Title from "@/components/atoms/common/title/title";
 import toRem from "@/style/utils/toRem";
 import BackgroundTextSVG from "./backgroundTextSVG";
 import BackgroundTextStyle from "./backgroundText.style";
+import { realColor } from "@/style/theme/theme";
+import { forwardRef, useEffect, useRef } from "react";
 
-const BackgroundText = () => {
+const BackgroundText = forwardRef<HTMLDivElement>((_, ref) => {
   return (
-    <BackgroundTextStyle>
-      <Title fontSize={toRem(28)} letterSpacing={toRem(-2)}>
+    <BackgroundTextStyle ref={ref}>
+      <Title fontSize={toRem(18)} fontWeight={500} color={realColor.gray3}>
         WORK EXPERIENCE
       </Title>
 
       <BackgroundTextSVG />
     </BackgroundTextStyle>
   );
-};
+});
 
 export default BackgroundText;

@@ -3,10 +3,10 @@
 import Image from "@/components/atoms/common/image/image";
 import IntroLogo from "@/assets/images/intro.png";
 import Layout from "@/components/atoms/common/layout/layout";
-import useFadeUpRef from "@/hooks/useFadeUpRef/useFadeUpRef";
+import { useRef } from "react";
 
 const IntroImage = () => {
-  const ref = useFadeUpRef();
+  const ref = useRef();
 
   return (
     <Layout display={"flex"} justifyContent={"center"}>

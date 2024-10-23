@@ -1,3 +1,5 @@
+"use client";
+
 import Layout from "@/components/atoms/common/layout/layout";
 import BackgroundText from "@/components/molecules/portfolio/backgroundText/backgroundText";
 import Lock from "@/assets/images/lock.png";
@@ -7,6 +9,7 @@ import School from "@/assets/images/school.png";
 import Vr from "@/assets/images/vr.png";
 import PortfolioItem from "@/components/molecules/portfolio/portfolioItem/portfolioItem";
 import toRem from "@/style/utils/toRem";
+import { useEffect, useRef } from "react";
 
 const portfolioList = [
   {
@@ -66,10 +69,74 @@ const portfolioList = [
   },
 ];
 
+const Start = 350;
+const End = 300;
+
 const Portfolio = () => {
+  const backgroundRef = useRef<HTMLDivElement>(null);
+  const layoutRef = useRef<HTMLDivElement>();
+
+  useEffect(() => {
+    const getTopOpacity = () => {
+      const { top } = layoutRef.current.getBoundingClientRect();
+
+      const show = 200;
+      const opacity = Math.min((1 * ((Start - top) / show) * 100) / 100, 1);
+
+      return opacity;
+    };
+
+    const getBottomOpacity = () => {
+      const { bottom } = layoutRef.current.getBoundingClientRect();
+      const show = 640;
+      const opacity = (1 * (((bottom - End) / (show - End)) * 100)) / 100;
+
+      return opacity;
+    };
+
+    const opacityAnimation = () => {
+      const { top, bottom } = layoutRef.current.getBoundingClientRect();
+
+      if (top > Start) {
+        backgroundRef.current.style.opacity = "0";
+        backgroundRef.current.classList.remove("bounce");
+        return;
+      }
+
+      if (bottom < End) {
+        backgroundRef.current.style.opacity = "0";
+        backgroundRef.current.classList.remove("bounce");
+        return;
+      }
+
+      const topOpacity = getTopOpacity();
+      const bottomOpacity = getBottomOpacity();
+
+      const opacity = bottomOpacity < 1 ? bottomOpacity : topOpacity;
+
+      backgroundRef.current.style.opacity = opacity.toString();
+
+      if (opacity > 0.9) {
+        backgroundRef.current.classList.add("bounce");
+      }
+    };
+
+    window.addEventListener("scroll", opacityAnimation);
+    opacityAnimation();
+
+    return () => {
+      window.removeEventListener("scroll", opacityAnimation);
+    };
+  }, []);
+
   return (
-    <Layout as="article" position={"relative"} padding={"10vw 15vw"}>
-      <BackgroundText />
+    <Layout
+      as="article"
+      position={"relative"}
+      padding={"10vw 15vw"}
+      ref={layoutRef}
+    >
+      <BackgroundText ref={backgroundRef} />
       <Layout
         display={"flex"}
         flexDirection={"column"}

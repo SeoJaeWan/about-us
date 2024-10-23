@@ -24,10 +24,11 @@ export const color = {
 export const realColor = {
   black: "#000",
   white: "#fff",
-  gray1: "#576574",
+  gray1: "#dfe4ea",
   gray2: "#576574",
+  gray3: "#dfdfdf",
   shadow: "#f1f2f6",
-  background: "#dff9fb",
+  background: "rgba(223, 249, 251, 0.5)",
 };
 
 export const media = {

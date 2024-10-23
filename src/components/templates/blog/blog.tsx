@@ -46,7 +46,7 @@ const Blog = async () => {
       as="article"
       position={"relative"}
       display={"flex"}
-      padding={"10vw 0 0"}
+      margin={"10vw 0 0"}
       backgroundColor={realColor.white}
     >
       <Info />

@@ -1,10 +1,10 @@
 "use client";
 import Content from "@/components/atoms/common/content/content";
 import Layout from "@/components/atoms/common/layout/layout";
-import useFadeUpRef from "@/hooks/useFadeUpRef/useFadeUpRef";
+import { useRef } from "react";
 
 const IntroContent = () => {
-  const ref = useFadeUpRef();
+  const ref = useRef();
 
   return (
     <Layout ref={ref} className="fadeUp--delay">

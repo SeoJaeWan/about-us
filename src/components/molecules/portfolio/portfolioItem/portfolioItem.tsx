@@ -6,6 +6,8 @@ import { StaticImageData } from "next/image";
 import PortfolioItemStyle from "./portfolioItem.style";
 import toRem from "@/style/utils/toRem";
 import { realColor } from "@/style/theme/theme";
+import { useRef } from "react";
+import useFadeUpRef from "@/hooks/useFadeUpRef/useFadeUpRef";
 
 type PortfolioItemProps = {
   info: {
@@ -23,28 +25,33 @@ const PortfolioItem = (props: PortfolioItemProps) => {
   const { info, src, href, backgroundColor } = props;
   const { name, year, spec, company } = info;
 
+  const baseRef = useRef();
+  const fadeRef = useFadeUpRef<HTMLLIElement>(baseRef);
+
   return (
-    <PortfolioItemStyle>
-      <PortfolioItemStyle.Link href={href} target={"_blank"}>
-        <PortfolioItemStyle.ImageBox $backgroundColor={backgroundColor}>
-          <Image src={src} alt={""} width={"auto"} height={toRem(180)} />
-        </PortfolioItemStyle.ImageBox>
+    <PortfolioItemStyle ref={baseRef}>
+      <div ref={fadeRef}>
+        <PortfolioItemStyle.Link href={href} target={"_blank"}>
+          <PortfolioItemStyle.ImageBox $backgroundColor={backgroundColor}>
+            <Image src={src} alt={""} width={"auto"} height={toRem(180)} />
+          </PortfolioItemStyle.ImageBox>
 
-        <PortfolioItemStyle.InfoBox>
-          <h3>
-            {name}
+          <PortfolioItemStyle.InfoBox>
+            <h3>
+              {name}
 
-            <span>`{year}</span>
-          </h3>
-          <Layout display={"flex"} justifyContent={"space-between"}>
-            <p>{spec}</p>
+              <span>`{year}</span>
+            </h3>
+            <Layout display={"flex"} justifyContent={"space-between"}>
+              <p>{spec}</p>
 
-            <p>@{company}</p>
-          </Layout>
-        </PortfolioItemStyle.InfoBox>
-      </PortfolioItemStyle.Link>
+              <p>@{company}</p>
+            </Layout>
+          </PortfolioItemStyle.InfoBox>
+        </PortfolioItemStyle.Link>
 
-      <PortfolioItemStyle.Shadow />
+        <PortfolioItemStyle.Shadow />
+      </div>
     </PortfolioItemStyle>
   );
 };

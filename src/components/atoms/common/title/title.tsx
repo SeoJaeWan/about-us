@@ -1,23 +1,24 @@
 "use client";
-import { ReactNode } from "react";
+import { forwardRef, ReactNode } from "react";
 import TitleStyle from "./title.style";
 import { StyleProps } from "@/style/module/createStyle";
 
 type TitleProps = {
   children: ReactNode;
   as?: string;
+  className?: string;
 } & StyleProps;
 
-const Title = (props: TitleProps) => {
-  const { as = "h2", children } = props;
+const Title = forwardRef((props: TitleProps, ref) => {
+  const { as = "h2", children, className } = props;
 
   const styleProps = TitleStyle.getStyleProps(props);
 
   return (
-    <TitleStyle as={as} {...styleProps}>
+    <TitleStyle ref={ref} as={as} className={className} {...styleProps}>
       {children}
     </TitleStyle>
   );
-};
+});
 
 export default Title;

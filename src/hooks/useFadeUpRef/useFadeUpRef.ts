@@ -1,29 +1,60 @@
-import { useEffect, useRef } from "react";
+import { MutableRefObject, useEffect, useRef } from "react";
 
-const useFadeUpRef = () => {
-  const ref = useRef<HTMLElement | null>(null);
+const useFadeUpRef = <T extends HTMLElement>(baseRef: MutableRefObject<T>) => {
+  const ref = useRef<T | null>(null);
 
   useEffect(() => {
-    const handleScrollEvent = () => {
-      if (ref.current) {
-        const height = ref.current.getBoundingClientRect().height;
-        if (ref.current.getBoundingClientRect().bottom <= height / 2) {
-          ref.current.classList.add("fadeReverseDown");
-          ref.current.classList.remove("fadeUp");
-        } else {
-          ref.current.classList.add("fadeUp");
-          ref.current.classList.remove("fadeReverseDown");
-        }
-      }
-    };
+    const hiddenRef = baseRef.current;
+    const currentRef = ref.current;
 
-    window.addEventListener("scroll", handleScrollEvent);
-    handleScrollEvent();
+    if (!hiddenRef || !currentRef) return;
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (!entry.isIntersecting) {
+            currentRef.classList.remove("fadeUp--ref");
+            currentRef.classList.add("fadeReverse--ref");
+          }
+        });
+      },
+      {
+        threshold: 0,
+      }
+    );
+
+    observer.observe(hiddenRef);
 
     return () => {
-      window.removeEventListener("scroll", handleScrollEvent);
+      observer.unobserve(hiddenRef);
     };
-  }, []);
+  }, [baseRef, ref]);
+
+  useEffect(() => {
+    const currentRef = ref.current;
+
+    if (!currentRef) return;
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("fadeUp--ref");
+            entry.target.classList.remove("fadeReverse--ref");
+          }
+        });
+      },
+      {
+        threshold: 0.5,
+      }
+    );
+
+    observer.observe(currentRef);
+
+    return () => {
+      observer.unobserve(currentRef);
+    };
+  }, [ref]);
 
   return ref;
 };

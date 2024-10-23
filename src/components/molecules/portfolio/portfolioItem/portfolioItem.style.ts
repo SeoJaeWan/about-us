@@ -33,27 +33,27 @@ const PortfolioItemContainer = styled.li`
   height: ${toRem(400)};
 
   &:hover ${PortfolioItemShadow} {
-    opacity: 0.9;
+    opacity: 0.8;
   }
 
   &:nth-child(1) {
-    left: ${toRem(-200)};
+    left: -14vw;
   }
 
   &:nth-child(2) {
-    left: ${toRem(300)};
+    left: 20vw;
   }
 
   &:nth-child(3) {
-    left: ${toRem(-350)};
+    left: -28vw;
   }
 
   &:nth-child(4) {
-    left: ${toRem(420)};
+    left: 26vw;
   }
 
   &:nth-child(5) {
-    left: ${toRem(-200)};
+    left: -12vw;
   }
 `;
 
