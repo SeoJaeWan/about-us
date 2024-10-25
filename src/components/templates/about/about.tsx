@@ -10,6 +10,7 @@ const About = () => {
     <Layout
       as={"article"}
       position={"relative"}
+      zIndex={"2"}
       display={"flex"}
       justifyContent={"center"}
       alignItems={"center"}

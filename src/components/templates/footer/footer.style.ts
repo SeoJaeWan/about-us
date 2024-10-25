@@ -1,6 +1,9 @@
 import styled from "styled-components";
 
 const FooterContainer = styled.footer`
+  position: relative;
+  z-index: 2;
+
   display: flex;
   justify-content: space-between;
   align-items: flex-start;

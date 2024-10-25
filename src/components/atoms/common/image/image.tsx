@@ -1,9 +1,10 @@
 "use client";
 import React, { forwardRef } from "react";
 import ImageStyle from "./image.style";
+import { StaticImageData } from "next/image";
 
-interface ImageProps extends React.HTMLProps<HTMLImageElement> {
-  src: string;
+interface ImageProps extends Omit<React.HTMLProps<HTMLImageElement>, "src"> {
+  src: StaticImageData | string;
   width: string | number;
   height: string | number;
   className?: string;

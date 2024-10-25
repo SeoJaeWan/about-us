@@ -4,7 +4,13 @@ import { realColor } from "@/style/theme/theme";
 
 const Intro = () => {
   return (
-    <Layout as="article" backgroundColor={realColor.white} height={"100vh"}>
+    <Layout
+      as="article"
+      position={"relative"}
+      zIndex={2}
+      backgroundColor={realColor.white}
+      height={"100vh"}
+    >
       <IntroAnimation />
     </Layout>
   );
