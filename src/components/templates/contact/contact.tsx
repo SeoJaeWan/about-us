@@ -22,7 +22,9 @@ const Contact = () => {
         CONTACT
       </Title>
       <Content>서재완에 대해 더 알고 싶으신가요?</Content>
-      <SubTitle fontSize={toRem(100)}>sjw7324@gmail.com</SubTitle>
+      <SubTitle fontSize={toRem(120)} letterSpacing={-2}>
+        sjw7324@gmail.com
+      </SubTitle>
       <Layout
         display={"flex"}
         gap={"50px"}

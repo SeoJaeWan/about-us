@@ -28,7 +28,7 @@ export const realColor = {
   gray2: "#576574",
   gray3: "#dfdfdf",
   shadow: "#f1f2f6",
-  background: "rgba(223, 249, 251, 0.5)",
+  background: "#121212",
 };
 
 export const media = {

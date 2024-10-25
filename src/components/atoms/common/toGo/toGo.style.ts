@@ -7,7 +7,11 @@ import styled from "styled-components";
 
 const { cssStyle, getStyleProps } = createStyle([interval]);
 
-const ToGoContainer = styled(Link)`
+type ToGoStyleProps = {
+  $isWhite: boolean;
+};
+
+const ToGoContainer = styled(Link)<ToGoStyleProps>`
   ${cssStyle};
 
   display: flex;
@@ -17,7 +21,20 @@ const ToGoContainer = styled(Link)`
   font-size: ${toRem(20)};
   font-weight: 700;
 
-  color: ${realColor.black};
+  color: ${(props) => (props.$isWhite ? realColor.white : realColor.black)};
+
+  svg {
+    width: 19px;
+    height: 19px;
+  }
+
+  circle {
+    fill: ${(props) => (props.$isWhite ? realColor.white : realColor.black)};
+  }
+
+  path {
+    stroke: ${(props) => (props.$isWhite ? realColor.black : realColor.white)};
+  }
 `;
 
 type ToGoStyleType = typeof ToGoContainer & GetStyleProps;

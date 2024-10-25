@@ -24,8 +24,8 @@ const AboutImage = () => {
         width={toRem(350)}
         height={"auto"}
         aspectRatio={"966/1480"}
-        borderRadius={"10px"}
-        border={`1px solid ${realColor.black}`}
+        borderRadius={"12px"}
+        border={`1px solid ${realColor.white}`}
         ref={imageRef}
       />
     </Layout>

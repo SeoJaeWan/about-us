@@ -10,22 +10,65 @@ const HeaderStyle = styled.header`
   width: 100vw;
   height: ${toRem(46)};
 
-  padding: 0 5vw;
-  font-size: ${toRem(16)};
-  font-weight: 600;
+  .background {
+    position: absolute;
+    left: 0;
+    top: 0;
 
-  /* background-color: white; */
+    width: 100vw;
 
-  div {
+    padding: 0 5vw;
+
+    overflow: hidden;
+
+    &:nth-child(1) {
+      z-index: 3;
+    }
+
+    &:nth-child(2) {
+      z-index: 2;
+    }
+
+    &:nth-child(3) {
+      z-index: 1;
+    }
+  }
+
+  .black {
+    width: 100%;
+
+    .content {
+      background-color: black;
+      background-clip: text;
+      -webkit-background-clip: text;
+    }
+  }
+
+  .white {
+    width: 100%;
+
+    .content {
+      background-color: white;
+      background-clip: text;
+      -webkit-background-clip: text;
+    }
+  }
+
+  .content {
+    height: ${toRem(46)};
+
     display: flex;
     align-items: center;
     justify-content: space-between;
 
     width: 100%;
-    height: 100%;
 
-    border-top: 2px solid black;
-    border-bottom: 1px solid black;
+    font-size: ${toRem(24)};
+    font-weight: 600;
+
+    p {
+      color: transparent;
+    }
   }
 `;
 

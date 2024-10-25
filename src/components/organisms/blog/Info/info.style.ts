@@ -20,6 +20,8 @@ const InfoStyleHeader = styled.h2`
   font-weight: 900;
 
   font-family: var(--font-concertone);
+
+  color: ${realColor.white};
 `;
 
 const InfoStyleContent = styled.p`
@@ -30,7 +32,7 @@ const InfoStyleContent = styled.p`
   font-weight: 600;
   line-height: ${toRem(40)};
 
-  color: ${realColor.gray2};
+  color: ${realColor.white};
 `;
 
 type InfoStyleType = typeof InfoContainer & {

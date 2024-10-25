@@ -27,7 +27,7 @@ const Background = () => {
     };
   }, []);
 
-  return <BackgroundStyle ref={backgroundRef} />;
+  return <BackgroundStyle ref={backgroundRef} className={"about"} />;
 };
 
 export default Background;

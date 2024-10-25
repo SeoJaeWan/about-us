@@ -27,6 +27,14 @@ const GlobalStyle = createGlobalStyle`
         font-family: var(--font-pretendard); 
     }
 
+    .hidden {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        clip: rect(0 0 0 0);
+        overflow: hidden;
+    }
+
     a {
         text-decoration: none;
     }

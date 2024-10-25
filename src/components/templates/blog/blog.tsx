@@ -43,11 +43,12 @@ const Blog = async () => {
 
   return (
     <Layout
-      as="article"
+      as={"article"}
       position={"relative"}
       display={"flex"}
       margin={"10vw 0 0"}
       backgroundColor={realColor.white}
+      className={"blog"}
     >
       <Info />
       <Contents blogData={blogData} />

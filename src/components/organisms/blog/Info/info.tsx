@@ -22,7 +22,9 @@ const Info = () => {
         노력하고 있습니다.
       </InfoStyle.Content>
 
-      <ToGo href={"https://bum-developer.tistory.com/"}>블로그 더보기</ToGo>
+      <ToGo href={"https://bum-developer.tistory.com/"} isWhite>
+        블로그 더보기
+      </ToGo>
     </InfoStyle>
   );
 };
