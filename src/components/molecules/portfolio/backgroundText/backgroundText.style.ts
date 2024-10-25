@@ -14,7 +14,6 @@ const BackgroundTextStyle = styled.div`
   position: fixed;
   top: 30vh;
   left: 0;
-  z-index: -1;
 
   display: flex;
   flex-direction: column;
@@ -23,6 +22,8 @@ const BackgroundTextStyle = styled.div`
   gap: ${toRem(40)};
 
   width: 100%;
+
+  opacity: 0;
 
   padding: ${toRem(10)} ${toRem(50)};
 

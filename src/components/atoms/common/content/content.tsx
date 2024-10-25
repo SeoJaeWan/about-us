@@ -1,5 +1,5 @@
 "use client";
-import { ReactNode } from "react";
+import { forwardRef, ReactNode } from "react";
 import ContentStyle from "./content.style";
 import { StyleProps } from "@/style/module/createStyle";
 
@@ -9,16 +9,16 @@ type ContentProps = {
   clamp?: number;
 } & StyleProps;
 
-const Content = (props: ContentProps) => {
+const Content = forwardRef((props: ContentProps, ref) => {
   const { children, isClamp, clamp } = props;
 
   const styleProps = ContentStyle.getStyleProps(props);
 
   return (
-    <ContentStyle {...styleProps} $isClamp={isClamp} $clamp={clamp}>
+    <ContentStyle {...styleProps} $isClamp={isClamp} $clamp={clamp} ref={ref}>
       {children}
     </ContentStyle>
   );
-};
+});
 
 export default Content;

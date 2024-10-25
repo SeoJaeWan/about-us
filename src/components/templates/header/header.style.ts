@@ -5,7 +5,7 @@ const HeaderStyle = styled.header`
   position: fixed;
   top: 4vw;
   left: 0;
-  z-index: 2;
+  z-index: 3;
 
   width: 100vw;
   height: ${toRem(46)};
@@ -64,7 +64,7 @@ const HeaderStyle = styled.header`
     width: 100%;
 
     font-size: ${toRem(24)};
-    font-weight: 600;
+    font-weight: 900;
 
     p {
       color: transparent;

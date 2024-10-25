@@ -45,8 +45,8 @@ const Blog = async () => {
     <Layout
       as={"article"}
       position={"relative"}
+      zIndex={2}
       display={"flex"}
-      margin={"10vw 0 0"}
       backgroundColor={realColor.white}
       className={"blog"}
     >

@@ -53,14 +53,13 @@ const Header = () => {
       });
     };
 
-    const blogAnimation = headerColorAnimation([".about", ".blog"]);
-    // const aboutAnimation = headerColorAnimation(".about");
+    const headerAnimation = headerColorAnimation([".about", ".blog"]);
 
-    window.addEventListener("scroll", blogAnimation);
-    // window.addEventListener("scroll", aboutAnimation);
+    window.addEventListener("scroll", headerAnimation);
+    headerAnimation();
+
     return () => {
-      window.removeEventListener("scroll", blogAnimation);
-      // window.removeEventListener("scroll", aboutAnimation);
+      window.removeEventListener("scroll", headerAnimation);
     };
   }, []);
 

@@ -10,6 +10,7 @@ import Vr from "@/assets/images/vr.png";
 import PortfolioItem from "@/components/molecules/portfolio/portfolioItem/portfolioItem";
 import toRem from "@/style/utils/toRem";
 import { useEffect, useRef } from "react";
+import { realColor } from "@/style/theme/theme";
 
 const portfolioList = [
   {
@@ -134,6 +135,7 @@ const Portfolio = () => {
       as="article"
       position={"relative"}
       padding={"10vw 15vw"}
+      backgroundColor={realColor.white}
       ref={layoutRef}
     >
       <BackgroundText ref={backgroundRef} />

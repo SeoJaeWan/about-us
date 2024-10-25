@@ -28,7 +28,7 @@ const AboutContent = () => {
         gap={toRem(5)}
         fontSize={toRem(20)}
         fontWeight={"400"}
-        letterSpacing={toRem(-2)}
+        letterSpacing={"-2px"}
         color={realColor.white}
       >
         ABOUT
