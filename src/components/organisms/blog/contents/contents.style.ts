@@ -4,7 +4,7 @@ import Link from "next/link";
 import styled from "styled-components";
 
 const ContentContainer = styled.ul`
-  width: 55%;
+  width: 60%;
 
   padding: 3vw 5vw;
 

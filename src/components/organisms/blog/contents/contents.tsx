@@ -49,7 +49,12 @@ const Contents = (props: ContentsProps) => {
                 {createdAt}
               </SubTitle>
 
-              <Title as="h3" fontSize={toRem(24)} mobileFontSize={toRem(18)}>
+              <Title
+                as="h3"
+                fontSize={toRem(24)}
+                mobileFontSize={toRem(18)}
+                wordBreak={"break-all"}
+              >
                 {title}
               </Title>
 

@@ -27,17 +27,16 @@ const InfoContainer = styled.div`
 `;
 
 const InfoStyleHeader = styled.h2`
-  display: flex;
-  align-items: end;
+  font-size: ${toRem(36)};
+  font-weight: 900;
 
-  span {
-    font-size: ${toRem(36)};
-    font-weight: 900;
+  font-family: var(--font-concertone);
 
-    font-family: var(--font-concertone);
+  color: ${realColor.white};
+  padding-bottom: 4px;
 
-    color: ${realColor.white};
-    padding-bottom: 4px;
+  @media (max-width: ${(props) => props.theme.media.mobile}px) {
+    font-size: ${toRem(28)};
   }
 `;
 
@@ -53,6 +52,11 @@ const InfoStyleContent = styled.p`
 
   @media (max-width: ${(props) => props.theme.media.tablet}px) {
     margin-bottom: ${toRem(100)};
+  }
+
+  @media (max-width: ${(props) => props.theme.media.mobile}px) {
+    font-size: ${toRem(16)};
+    margin-bottom: ${toRem(50)};
   }
 `;
 

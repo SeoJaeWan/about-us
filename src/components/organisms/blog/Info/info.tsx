@@ -10,11 +10,14 @@ const Info = () => {
     <InfoStyle className={"blog"}>
       <InfoStyle.Header>
         <span className="hidden">Seo Jae Wan</span>
-        <Logo width={"80%"} height={"auto"} maxWidth={"430px"} />
-        <span>
-          's <LineBreak isShow={true} />
-          BLOG
-        </span>
+        <Logo
+          width={"80%"}
+          height={"auto"}
+          maxWidth={"430px"}
+          marginBottom={"-5px"}
+        />
+        's <LineBreak isShow={true} />
+        BLOG
       </InfoStyle.Header>
       <InfoStyle.Content>
         개발 중 마주한 질문들과 그 과정에서 배운 점들을 공유하는 공간입니다.{" "}

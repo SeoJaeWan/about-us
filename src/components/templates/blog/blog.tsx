@@ -49,6 +49,7 @@ const Blog = async () => {
       display={"flex"}
       backgroundColor={realColor.white}
       tabletFlexDirection={"column"}
+      width={"100%"}
     >
       <Info />
       <Contents blogData={blogData} />
