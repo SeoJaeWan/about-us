@@ -10,13 +10,16 @@ const About = () => {
     <Layout
       as={"article"}
       position={"relative"}
-      zIndex={"2"}
+      zIndex={"3"}
       display={"flex"}
       justifyContent={"center"}
       alignItems={"center"}
       padding={"0 5vw"}
       height={"100vh"}
       backgroundColor={realColor.white}
+      tabletFlexDirection={"column"}
+      mobileHeight={"80vh"}
+      className={"about"}
     >
       <Background />
       <AboutImage />

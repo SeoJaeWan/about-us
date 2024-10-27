@@ -33,6 +33,6 @@ export const realColor = {
 
 export const media = {
   mobile: 767,
-  tablet: 1024,
+  tablet: 1120,
   notebook: 1680,
 };

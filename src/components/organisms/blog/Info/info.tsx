@@ -3,15 +3,18 @@
 import Logo from "@/components/molecules/common/logo/logo";
 import InfoStyle from "./info.style";
 import ToGo from "@/components/atoms/common/toGo/toGo";
+import LineBreak from "@/components/atoms/common/lineBreak/lineBreak";
 
 const Info = () => {
   return (
-    <InfoStyle>
+    <InfoStyle className={"blog"}>
       <InfoStyle.Header>
-        <Logo width={"auto"} height={"70px"} />
-        's
-        <br />
-        BLOG
+        <span className="hidden">Seo Jae Wan</span>
+        <Logo width={"80%"} height={"auto"} maxWidth={"430px"} />
+        <span>
+          's <LineBreak isShow={true} />
+          BLOG
+        </span>
       </InfoStyle.Header>
       <InfoStyle.Content>
         개발 중 마주한 질문들과 그 과정에서 배운 점들을 공유하는 공간입니다.{" "}

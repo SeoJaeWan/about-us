@@ -7,7 +7,7 @@ const Intro = () => {
     <Layout
       as="article"
       position={"relative"}
-      zIndex={2}
+      zIndex={"3"}
       backgroundColor={realColor.white}
       height={"100vh"}
     >

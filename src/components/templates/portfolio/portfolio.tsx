@@ -101,14 +101,18 @@ const Portfolio = () => {
       if (top > Start) {
         backgroundRef.current.style.opacity = "0";
         backgroundRef.current.classList.remove("bounce");
+        backgroundRef.current.style.visibility = "hidden";
         return;
       }
 
       if (bottom < End) {
         backgroundRef.current.style.opacity = "0";
         backgroundRef.current.classList.remove("bounce");
+        backgroundRef.current.style.visibility = "hidden";
         return;
       }
+
+      backgroundRef.current.style.visibility = "visible";
 
       const topOpacity = getTopOpacity();
       const bottomOpacity = getBottomOpacity();
@@ -134,8 +138,10 @@ const Portfolio = () => {
     <Layout
       as="article"
       position={"relative"}
+      zIndex={2}
       padding={"10vw 15vw"}
       backgroundColor={realColor.white}
+      mobilePadding={"3vw 5vw"}
       ref={layoutRef}
     >
       <BackgroundText ref={backgroundRef} />
@@ -145,6 +151,9 @@ const Portfolio = () => {
         alignItems={"center"}
         as={"ul"}
         padding={`${toRem(400)} 0`}
+        mobileWidth={"100%"}
+        mobileGap={"20px"}
+        mobilePadding={`${toRem(200)} 0`}
       >
         {portfolioList.map(({ info, src, href, backgroundColor }, idx) => (
           <PortfolioItem

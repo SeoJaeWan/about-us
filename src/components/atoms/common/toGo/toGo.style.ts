@@ -23,6 +23,10 @@ const ToGoContainer = styled(Link)<ToGoStyleProps>`
 
   color: ${(props) => (props.$isWhite ? realColor.white : realColor.black)};
 
+  @media (max-width: ${(props) => props.theme.media.mobile}px) {
+    font-size: ${toRem(14)};
+  }
+
   svg {
     width: 19px;
     height: 19px;

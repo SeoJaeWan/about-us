@@ -30,7 +30,9 @@ const generateMediaResponsiveStyles = (properties) => {
   const medias = Object.keys(media);
   return css`
     ${generateResponsiveStyles(properties)}
-    ${medias.map((breakpoint) => createMediaQuery(breakpoint, properties))}
+    ${medias
+      .reverse()
+      .map((breakpoint) => createMediaQuery(breakpoint, properties))}
   `;
 };
 

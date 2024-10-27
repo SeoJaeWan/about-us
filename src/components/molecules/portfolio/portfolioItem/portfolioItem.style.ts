@@ -24,6 +24,10 @@ const PortfolioItemShadow = styled.div`
 
   transition: all 0.5s;
   opacity: 0.8;
+
+  @media (max-width: ${(props) => props.theme.media.mobile}px) {
+    display: none;
+  }
 `;
 
 const PortfolioItemContainer = styled.li`
@@ -32,28 +36,81 @@ const PortfolioItemContainer = styled.li`
   width: ${toRem(400)};
   height: ${toRem(400)};
 
+  transition: all 0.4s;
+
   &:hover ${PortfolioItemShadow} {
     opacity: 0.8;
   }
 
   &:nth-child(1) {
     left: -14vw;
+
+    @media (max-width: ${(props) => props.theme.media.mobile}px) {
+      top: inherit;
+      left: inherit;
+    }
   }
 
   &:nth-child(2) {
     left: 20vw;
+
+    @media (max-width: ${(props) => props.theme.media.tablet}px) {
+      left: 18vw;
+      top: 30px;
+    }
+
+    @media (max-width: ${(props) => props.theme.media.mobile}px) {
+      top: inherit;
+      left: inherit;
+    }
   }
 
   &:nth-child(3) {
     left: -28vw;
+
+    @media (max-width: ${(props) => props.theme.media.tablet}px) {
+      left: -20vw;
+      top: 60px;
+    }
+
+    @media (max-width: ${(props) => props.theme.media.mobile}px) {
+      top: inherit;
+      left: inherit;
+    }
   }
 
   &:nth-child(4) {
     left: 26vw;
+
+    @media (max-width: ${(props) => props.theme.media.tablet}px) {
+      left: 15vw;
+      top: 90px;
+    }
+
+    @media (max-width: ${(props) => props.theme.media.mobile}px) {
+      top: inherit;
+      left: inherit;
+    }
   }
 
   &:nth-child(5) {
     left: -12vw;
+
+    @media (max-width: ${(props) => props.theme.media.tablet}px) {
+      top: 120px;
+    }
+
+    @media (max-width: ${(props) => props.theme.media.mobile}px) {
+      top: inherit;
+      left: inherit;
+    }
+  }
+
+  @media (max-width: ${(props) => props.theme.media.mobile}px) {
+    width: 100%;
+    height: auto;
+
+    aspect-ratio: 1/1;
   }
 `;
 
@@ -87,6 +144,10 @@ const PortfolioItemInfoBox = styled.div`
     font-weight: 500;
 
     color: ${realColor.gray2};
+
+    @media (max-width: ${(props) => props.theme.media.mobile}px) {
+      font-size: ${toRem(16)};
+    }
   }
 
   h3 {
@@ -100,6 +161,14 @@ const PortfolioItemInfoBox = styled.div`
     span {
       font-size: ${toRem(20)};
       font-weight: 500;
+    }
+
+    @media (max-width: ${(props) => props.theme.media.mobile}px) {
+      font-size: ${toRem(20)};
+
+      span {
+        font-size: ${toRem(14)};
+      }
     }
   }
 `;

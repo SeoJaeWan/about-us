@@ -8,7 +8,10 @@ const Background = () => {
 
   useEffect(() => {
     const translateAnimation = () => {
-      const viewHeight = window.innerHeight;
+      const { height } = document
+        .querySelector(".about")
+        .getBoundingClientRect();
+      const viewHeight = height;
       const start = viewHeight * (6 / 7);
       const bottom = viewHeight - window.scrollY;
 
@@ -27,7 +30,7 @@ const Background = () => {
     };
   }, []);
 
-  return <BackgroundStyle ref={backgroundRef} className={"about"} />;
+  return <BackgroundStyle ref={backgroundRef} className={"about-background"} />;
 };
 
 export default Background;

@@ -53,7 +53,10 @@ const Header = () => {
       });
     };
 
-    const headerAnimation = headerColorAnimation([".about", ".blog"]);
+    const headerAnimation = headerColorAnimation([
+      ".about-background",
+      ".blog",
+    ]);
 
     window.addEventListener("scroll", headerAnimation);
     headerAnimation();

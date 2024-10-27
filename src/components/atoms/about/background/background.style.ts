@@ -10,6 +10,10 @@ const BackgroundStyle = styled.div`
   height: calc(100vh + 100vh * (6 / 7));
 
   background-color: ${realColor.background};
+
+  @media (max-width: ${(props) => props.theme.media.mobile}px) {
+    height: calc(80vh + 80vh * (6 / 7));
+  }
 `;
 
 export default BackgroundStyle;

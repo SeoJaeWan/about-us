@@ -7,7 +7,12 @@ const EmailAnimation = (props) => {
   const { email } = props;
 
   return (
-    <SubTitle fontSize={toRem(120)} letterSpacing={"-4px"}>
+    <SubTitle
+      fontSize={"8vw"}
+      letterSpacing={"-4px"}
+      mobileFontSize={"10vw"}
+      mobileLetterSpacing={"-2px"}
+    >
       {email.split("").map((str, idx) => (
         <EmailAnimationStyle key={idx} className="email" $delay={idx / 20}>
           {str}

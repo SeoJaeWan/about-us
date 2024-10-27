@@ -1,6 +1,10 @@
 import { MutableRefObject, useEffect, useRef } from "react";
 
-const useFadeUpRef = <T extends HTMLElement>(baseRef: MutableRefObject<T>) => {
+const useFadeUpRef = <T extends HTMLElement>(
+  baseRef: MutableRefObject<T>,
+  animationClassName: string = "fadeUp--ref",
+  animationRemoveClassName: string = "fadeUpReverse--ref"
+) => {
   const ref = useRef<T | null>(null);
 
   useEffect(() => {
@@ -13,8 +17,8 @@ const useFadeUpRef = <T extends HTMLElement>(baseRef: MutableRefObject<T>) => {
       (entries) => {
         entries.forEach((entry) => {
           if (!entry.isIntersecting) {
-            currentRef.classList.remove("fadeUp--ref");
-            currentRef.classList.add("fadeReverse--ref");
+            currentRef.classList.remove(animationClassName);
+            currentRef.classList.add(animationRemoveClassName);
           }
         });
       },
@@ -39,8 +43,8 @@ const useFadeUpRef = <T extends HTMLElement>(baseRef: MutableRefObject<T>) => {
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            entry.target.classList.add("fadeUp--ref");
-            entry.target.classList.remove("fadeReverse--ref");
+            entry.target.classList.add(animationClassName);
+            entry.target.classList.remove(animationRemoveClassName);
           }
         });
       },

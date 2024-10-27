@@ -18,10 +18,10 @@ const Contents = (props: ContentsProps) => {
   const { blogData } = props;
 
   return (
-    <Layout width={"55%"} padding={"3vw 5vw"} as="ul">
+    <ContentStyle>
       {blogData.map(({ title, createdAt, link, content, thumbnail }) => (
-        <ContentStyle key={title}>
-          <ContentStyle.Box href={link} target={"_blank"}>
+        <ContentStyle.Item key={title}>
+          <ContentStyle.Link href={link} target={"_blank"}>
             <Image
               src={thumbnail}
               alt={""}
@@ -30,6 +30,8 @@ const Contents = (props: ContentsProps) => {
               objectFit={"cover"}
               border={`2px solid ${realColor.gray1}`}
               borderRadius={"20px"}
+              mobileWidth={"100%"}
+              mobileHeight={"181px"}
             />
 
             <Layout
@@ -37,12 +39,17 @@ const Contents = (props: ContentsProps) => {
               flexDirection={"column"}
               justifyContent={"center"}
               width={"calc(100% - 340px - 30px)"}
+              mobileWidth={"100%"}
             >
-              <SubTitle fontSize={toRem(16)} color={realColor.gray2}>
+              <SubTitle
+                fontSize={toRem(16)}
+                color={realColor.gray2}
+                mobileFontSize={toRem(12)}
+              >
                 {createdAt}
               </SubTitle>
 
-              <Title as="h3" fontSize={toRem(24)}>
+              <Title as="h3" fontSize={toRem(24)} mobileFontSize={toRem(18)}>
                 {title}
               </Title>
 
@@ -51,15 +58,18 @@ const Contents = (props: ContentsProps) => {
                 lineHeight={toRem(28)}
                 isClamp
                 clamp={4}
-                margin={`${toRem(20)} 0 0`}
+                marginTop={`${toRem(20)} 0 0`}
+                mobileLineHeight={toRem(20)}
+                mobileFontSize={toRem(14)}
+                mobileMargin={`0`}
               >
                 {content}
               </Content>
             </Layout>
-          </ContentStyle.Box>
-        </ContentStyle>
+          </ContentStyle.Link>
+        </ContentStyle.Item>
       ))}
-    </Layout>
+    </ContentStyle>
   );
 };
 

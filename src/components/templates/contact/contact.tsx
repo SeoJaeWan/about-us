@@ -54,13 +54,21 @@ const Contact = () => {
         height={"100vh"}
         padding={"0 12vw"}
         opacity={"0"}
+        mobilePadding={"0 5vw"}
         backgroundColor={realColor.white}
         ref={backgroundRef}
       >
-        <Title fontSize={toRem(18)} fontWeight={500} color={realColor.gray2}>
+        <Title
+          fontSize={toRem(18)}
+          fontWeight={500}
+          color={realColor.gray2}
+          mobileFontSize={toRem(16)}
+        >
           CONTACT
         </Title>
-        <Content>서재완에 대해 더 알고 싶으신가요?</Content>
+        <Content mobileFontSize={toRem(16)} mobileMargin={"0 0 10px"}>
+          서재완에 대해 더 알고 싶으신가요?
+        </Content>
 
         <EmailAnimation email={"sjw7324@gmail.com"} />
 
@@ -69,9 +77,16 @@ const Contact = () => {
           gap={"50px"}
           width={"100%"}
           marginTop={toRem(50)}
+          mobileFlexDirection={"column"}
+          mobileGap={"20px"}
         >
-          <Layout width={"calc(100% / 2 - 30px)"}>
-            <Content lineHeight={toRem(30)}>
+          <Layout width={"calc(100% / 2 - 30px)"} mobileWidth={"100%"}>
+            <Content
+              lineHeight={toRem(30)}
+              mobileLineHeight={toRem(24)}
+              mobileFontSize={toRem(16)}
+              mobileMargin={"0 0 20px"}
+            >
               성장 중인 개발자를 찾으시나요? 언제나 새로운 도전을 두려워하지
               않는 개발자입니다. 메일을 보내주시면 1~2일 내로 성심성의껏
               확인하고 답장드리겠습니다. 함께할 수 있길 기대합니다.
@@ -80,8 +95,13 @@ const Contact = () => {
             <ToGo href="mailto:sjw7324@gmail.com">메일 보내기</ToGo>
           </Layout>
 
-          <Layout width={"calc(100% / 2 - 30px)"}>
-            <Content lineHeight={toRem(30)}>
+          <Layout width={"calc(100% / 2 - 30px)"} mobileWidth={"100%"}>
+            <Content
+              lineHeight={toRem(30)}
+              mobileLineHeight={toRem(24)}
+              mobileFontSize={toRem(16)}
+              mobileMargin={"0"}
+            >
               인간 서재완이 궁금하셔도 좋아요. 커피챗 중독자로서 언제든지 대화를
               나눌 준비가 되어 있어요. 대화를 통해 서로 배우고 성장할 수 있는
               기회라면 언제든 환영입니다.

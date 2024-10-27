@@ -7,7 +7,7 @@ type LogoProps = {
 };
 
 const Logo = (props: LogoProps) => {
-  const { width, height } = props;
+  const { width, height, ...rest } = props;
 
   return (
     <Image
@@ -17,6 +17,7 @@ const Logo = (props: LogoProps) => {
       width={width}
       height={height}
       aspectRatio={"899/147"}
+      {...rest}
     />
   );
 };

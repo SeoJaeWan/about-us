@@ -14,6 +14,18 @@ const fadeUp = keyframes`
     }
 `;
 
+const fadeUpOpacity = keyframes`
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    100% {
+        opacity: 0.4;
+        transform: translateY(0px);
+    }
+`;
+
 const GlobalStyle = createGlobalStyle`
     ${reset}
 
@@ -69,7 +81,19 @@ const GlobalStyle = createGlobalStyle`
         transition: opacity 1s, transform 1s;
     }
 
-    .fadeReverse--ref {
+    .fadeUpReverse--ref {
+        opacity: 0;
+        transform: translateY(20px);
+        transition: opacity 1s, transform 1s;
+    }
+    
+    .fadeUpOpacity--ref {
+        opacity: 0.2;
+        transform: translateY(0);
+        transition: opacity 1s, transform 1s;
+    }
+
+    .fadeUpOpacityReverse--ref {
         opacity: 0;
         transform: translateY(20px);
         transition: opacity 1s, transform 1s;

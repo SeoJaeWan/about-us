@@ -5,7 +5,7 @@ const HeaderStyle = styled.header`
   position: fixed;
   top: 4vw;
   left: 0;
-  z-index: 3;
+  z-index: 4;
 
   width: 100vw;
   height: ${toRem(46)};
