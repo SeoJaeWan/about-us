@@ -5,6 +5,8 @@ interface ContainerProps {
 }
 
 const Container = styled.section<ContainerProps>`
+  position: relative;
+
   width: 100%;
   height: 100%;
   min-height: 100vh;

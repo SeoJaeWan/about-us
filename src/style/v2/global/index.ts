@@ -9,10 +9,6 @@ const GlobalStyle = styled.createGlobalStyle`
     --content: #fffff0;
   }
 
-  /* body {
-    overflow-x: hidden;
-  } */
-
   main {
     background: var(--background);
     color: var(--content);
