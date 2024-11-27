@@ -1,8 +1,29 @@
+import Footer from "@/components/templates/footer/footer";
+import Header from "@/components/templates/header/header";
 import StyledComponentsRegistry from "@/lib/registry";
 import Theme from "@/lib/theme";
-import { Inter } from "next/font/google";
+import localFont from "next/font/local";
 
-const inter = Inter({ subsets: ["latin"] });
+const pretendard = localFont({
+  src: "../assets/font/PretendardVariable.woff2",
+  display: "swap",
+  weight: "45 920",
+  variable: "--font-pretendard",
+});
+
+const concertOne = localFont({
+  src: "../assets/font/ConcertOne.ttf",
+  display: "swap",
+  weight: "45 920",
+  variable: "--font-concertone",
+});
+
+const londrinaSketch = localFont({
+  src: "../assets/font/LondrinaSketch.ttf",
+  display: "swap",
+  weight: "45 920",
+  variable: "--font-londrinaSketch",
+});
 
 export const metadata = {
   title: "서재완 포트폴리오",
@@ -12,9 +33,15 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="ko">
-      <body className={inter.className}>
+      <body
+        className={`${pretendard.variable} ${concertOne.variable} ${londrinaSketch.variable}`}
+      >
         <StyledComponentsRegistry>
-          <Theme>{children}</Theme>
+          <Theme>
+            <Header />
+            {children}
+            <Footer />
+          </Theme>
         </StyledComponentsRegistry>
       </body>
     </html>
