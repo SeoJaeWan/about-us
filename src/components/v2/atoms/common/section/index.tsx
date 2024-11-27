@@ -1,12 +1,19 @@
 "use client";
 
 import { PropsWithChildren } from "react";
-import SectionStyle from "./section.style";
+import SectionStyle, { SectionStyleProps } from "./section.style";
+import StripDollar from "@/style/v2/utils/stripDollar";
 
-const Section = (props: PropsWithChildren) => {
-  const { children } = props;
+type SectionProps = PropsWithChildren & StripDollar<SectionStyleProps>;
 
-  return <SectionStyle.Container>{children}</SectionStyle.Container>;
+const Section = (props: SectionProps) => {
+  const { children, isPadding } = props;
+
+  return (
+    <SectionStyle.Container $isPadding={isPadding}>
+      {children}
+    </SectionStyle.Container>
+  );
 };
 
 export default Section;

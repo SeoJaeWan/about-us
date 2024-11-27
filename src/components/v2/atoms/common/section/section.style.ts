@@ -1,12 +1,18 @@
 import styled from "styled-components";
 
-const Container = styled.section`
-  width: 100%;
-  height: 100vh;
+interface ContainerProps {
+  $isPadding?: boolean;
+}
 
-  padding: 0 6vw;
-  padding-top: 78px;
+const Container = styled.section<ContainerProps>`
+  width: 100%;
+  height: 100%;
+  min-height: 100vh;
+
+  padding: ${(props) => (props.$isPadding ? "0 6vw" : "0")};
 `;
+
+export type SectionStyleProps = ContainerProps;
 
 const SectionStyle = {
   Container,

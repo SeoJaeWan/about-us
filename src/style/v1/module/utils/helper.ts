@@ -28,6 +28,7 @@ const createMediaQuery = (breakpoint, properties) => css`
 
 const generateMediaResponsiveStyles = (properties) => {
   const medias = Object.keys(media);
+
   return css`
     ${generateResponsiveStyles(properties)}
     ${medias
