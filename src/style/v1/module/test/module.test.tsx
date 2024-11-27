@@ -1,9 +1,9 @@
 import { render, screen } from "@testing-library/react";
-import Theme from "@/lib/theme";
+import Theme from "@/lib/v1/theme";
 import styled from "styled-components";
 import createStyle from "../createStyle";
 import background from "../styles/background";
-import { media } from "@/style/theme/theme";
+import { media } from "@/style/v1/theme/theme";
 
 const { cssStyle, getStyleProps } = createStyle([background]);
 

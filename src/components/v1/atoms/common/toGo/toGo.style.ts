@@ -1,7 +1,7 @@
-import createStyle, { GetStyleProps } from "@/style/module/createStyle";
-import interval from "@/style/module/styles/interval";
-import { realColor } from "@/style/theme/theme";
-import toRem from "@/style/utils/toRem";
+import createStyle, { GetStyleProps } from "@/style/v1/module/createStyle";
+import interval from "@/style/v1/module/styles/interval";
+import { realColor } from "@/style/v1/theme/theme";
+import toRem from "@/style/v1/utils/toRem";
 import Link from "next/link";
 import styled from "styled-components";
 

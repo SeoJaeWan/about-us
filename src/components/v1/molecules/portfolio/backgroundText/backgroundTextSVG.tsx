@@ -1,4 +1,4 @@
-import { realColor } from "@/style/theme/theme";
+import { realColor } from "@/style/v1/theme/theme";
 
 const BackgroundTextSVG = () => {
   return (

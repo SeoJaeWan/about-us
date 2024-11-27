@@ -1,7 +1,7 @@
 import Layout from "@/components/v1/atoms/common/layout/layout";
 import Contents from "@/components/v1/organisms/blog/contents/contents";
 import Info from "@/components/v1/organisms/blog/Info/info";
-import { realColor } from "@/style/theme/theme";
+import { realColor } from "@/style/v1/theme/theme";
 import dayjs from "dayjs";
 
 export type BlogDataType = {

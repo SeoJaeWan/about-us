@@ -1,7 +1,7 @@
 import Footer from "@/components/v1/templates/footer/footer";
 import Header from "@/components/v1/templates/header/header";
-import StyledComponentsRegistry from "@/lib/registry";
-import Theme from "@/lib/theme";
+import StyledComponentsRegistry from "@/lib/v1/registry";
+import Theme from "@/lib/v1/theme";
 import localFont from "next/font/local";
 
 const pretendard = localFont({

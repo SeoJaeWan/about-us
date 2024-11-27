@@ -1,7 +1,7 @@
 "use client";
 
 import useThemeStore from "@/store/themeStore";
-import { color, font, media } from "@/style/theme/theme";
+import { color, font, media } from "@/style/v1/theme/theme";
 import { ThemeProvider } from "styled-components";
 
 const Theme = (props) => {

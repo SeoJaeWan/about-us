@@ -1,12 +1,12 @@
 import Layout from "@/components/v1/atoms/common/layout/layout";
 import Title from "@/components/v1/atoms/common/title/title";
-import toRem from "@/style/utils/toRem";
+import toRem from "@/style/v1/utils/toRem";
 import Logo from "../../common/logo/logo";
 import Content from "@/components/v1/atoms/common/content/content";
 import ToGo from "@/components/v1/atoms/common/toGo/toGo";
 import { useRef } from "react";
 import useFadeUpRef from "@/hooks/useFadeUpRef/useFadeUpRef";
-import { realColor } from "@/style/theme/theme";
+import { realColor } from "@/style/v1/theme/theme";
 
 const AboutContent = () => {
   const boxRef = useRef();

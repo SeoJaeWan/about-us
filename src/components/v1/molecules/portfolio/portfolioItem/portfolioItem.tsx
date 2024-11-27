@@ -4,8 +4,8 @@ import Image from "@/components/v1/atoms/common/image/image";
 import Layout from "@/components/v1/atoms/common/layout/layout";
 import { StaticImageData } from "next/image";
 import PortfolioItemStyle from "./portfolioItem.style";
-import toRem from "@/style/utils/toRem";
-import { realColor } from "@/style/theme/theme";
+import toRem from "@/style/v1/utils/toRem";
+import { realColor } from "@/style/v1/theme/theme";
 import { useRef } from "react";
 import useFadeUpRef from "@/hooks/useFadeUpRef/useFadeUpRef";
 

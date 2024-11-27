@@ -1,7 +1,7 @@
-import createStyle, { GetStyleProps } from "@/style/module/createStyle";
-import font from "@/style/module/styles/font";
-import interval from "@/style/module/styles/interval";
-import toRem from "@/style/utils/toRem";
+import createStyle, { GetStyleProps } from "@/style/v1/module/createStyle";
+import font from "@/style/v1/module/styles/font";
+import interval from "@/style/v1/module/styles/interval";
+import toRem from "@/style/v1/utils/toRem";
 import styled, { css } from "styled-components";
 
 const { cssStyle, getStyleProps } = createStyle([interval, font]);

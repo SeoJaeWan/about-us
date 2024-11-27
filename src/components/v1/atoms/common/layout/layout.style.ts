@@ -1,11 +1,11 @@
-import createStyle, { GetStyleProps } from "@/style/module/createStyle";
-import background from "@/style/module/styles/background";
-import border from "@/style/module/styles/border";
-import display from "@/style/module/styles/display";
-import interval from "@/style/module/styles/interval";
-import other from "@/style/module/styles/other";
-import position from "@/style/module/styles/position";
-import size from "@/style/module/styles/size";
+import createStyle, { GetStyleProps } from "@/style/v1/module/createStyle";
+import background from "@/style/v1/module/styles/background";
+import border from "@/style/v1/module/styles/border";
+import display from "@/style/v1/module/styles/display";
+import interval from "@/style/v1/module/styles/interval";
+import other from "@/style/v1/module/styles/other";
+import position from "@/style/v1/module/styles/position";
+import size from "@/style/v1/module/styles/size";
 import styled from "styled-components";
 
 const { cssStyle, getStyleProps } = createStyle([

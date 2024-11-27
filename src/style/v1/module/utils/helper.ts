@@ -1,4 +1,4 @@
-import { media } from "@/style/theme/theme";
+import { media } from "@/style/v1/theme/theme";
 import { css } from "styled-components";
 
 const generateResponsiveStyles = (properties) => css`

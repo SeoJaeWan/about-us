@@ -1,6 +1,6 @@
 "use client";
 import Layout from "@/components/v1/atoms/common/layout/layout";
-import { realColor } from "@/style/theme/theme";
+import { realColor } from "@/style/v1/theme/theme";
 import AboutContent from "@/components/v1/molecules/about/aboutContent/aboutContent";
 import AboutImage from "@/components/v1/molecules/about/aboutImage/aboutImage";
 import Background from "@/components/v1/atoms/about/background/background";

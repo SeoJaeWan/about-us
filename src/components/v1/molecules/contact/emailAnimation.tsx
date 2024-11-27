@@ -1,5 +1,5 @@
 import SubTitle from "@/components/v1/atoms/common/subTitle/subTitle";
-import toRem from "@/style/utils/toRem";
+import toRem from "@/style/v1/utils/toRem";
 import React from "react";
 import EmailAnimationStyle from "./emailAnimation.style";
 

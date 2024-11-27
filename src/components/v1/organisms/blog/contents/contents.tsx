@@ -3,10 +3,10 @@
 import Image from "@/components/v1/atoms/common/image/image";
 import Layout from "@/components/v1/atoms/common/layout/layout";
 import { BlogDataType } from "@/components/v1/templates/blog/blog";
-import { realColor } from "@/style/theme/theme";
+import { realColor } from "@/style/v1/theme/theme";
 import ContentStyle from "./contents.style";
 import Title from "@/components/v1/atoms/common/title/title";
-import toRem from "@/style/utils/toRem";
+import toRem from "@/style/v1/utils/toRem";
 import Content from "@/components/v1/atoms/common/content/content";
 import SubTitle from "@/components/v1/atoms/common/subTitle/subTitle";
 

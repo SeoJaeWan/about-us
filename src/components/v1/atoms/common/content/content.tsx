@@ -1,7 +1,7 @@
 "use client";
 import { forwardRef, ReactNode } from "react";
 import ContentStyle from "./content.style";
-import { StyleProps } from "@/style/module/createStyle";
+import { StyleProps } from "@/style/v1/module/createStyle";
 
 type ContentProps = {
   children: ReactNode;

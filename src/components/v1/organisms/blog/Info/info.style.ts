@@ -1,5 +1,5 @@
-import { realColor } from "@/style/theme/theme";
-import toRem from "@/style/utils/toRem";
+import { realColor } from "@/style/v1/theme/theme";
+import toRem from "@/style/v1/utils/toRem";
 import styled from "styled-components";
 
 const InfoContainer = styled.div`

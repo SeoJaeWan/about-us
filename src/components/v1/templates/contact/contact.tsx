@@ -5,8 +5,8 @@ import SubTitle from "@/components/v1/atoms/common/subTitle/subTitle";
 import Title from "@/components/v1/atoms/common/title/title";
 import ToGo from "@/components/v1/atoms/common/toGo/toGo";
 import EmailAnimation from "@/components/v1/molecules/contact/emailAnimation";
-import { realColor } from "@/style/theme/theme";
-import toRem from "@/style/utils/toRem";
+import { realColor } from "@/style/v1/theme/theme";
+import toRem from "@/style/v1/utils/toRem";
 import { useEffect, useRef } from "react";
 
 const Contact = () => {

@@ -1,7 +1,7 @@
 "use client";
 import Content from "@/components/v1/atoms/common/content/content";
 import Layout from "@/components/v1/atoms/common/layout/layout";
-import toRem from "@/style/utils/toRem";
+import toRem from "@/style/v1/utils/toRem";
 import { useRef } from "react";
 
 const IntroContent = () => {

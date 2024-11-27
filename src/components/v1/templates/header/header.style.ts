@@ -1,4 +1,4 @@
-import toRem from "@/style/utils/toRem";
+import toRem from "@/style/v1/utils/toRem";
 import styled from "styled-components";
 
 const HeaderStyle = styled.header`

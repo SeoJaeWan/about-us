@@ -1,8 +1,8 @@
-import createStyle, { GetStyleProps } from "@/style/module/createStyle";
-import border from "@/style/module/styles/border";
-import display from "@/style/module/styles/display";
-import interval from "@/style/module/styles/interval";
-import size from "@/style/module/styles/size";
+import createStyle, { GetStyleProps } from "@/style/v1/module/createStyle";
+import border from "@/style/v1/module/styles/border";
+import display from "@/style/v1/module/styles/display";
+import interval from "@/style/v1/module/styles/interval";
+import size from "@/style/v1/module/styles/size";
 import Image from "next/image";
 import styled from "styled-components";
 

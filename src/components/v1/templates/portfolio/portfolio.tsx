@@ -8,9 +8,9 @@ import Notes from "@/assets/v1/images/notes.png";
 import School from "@/assets/v1/images/school.png";
 import Vr from "@/assets/v1/images/vr.png";
 import PortfolioItem from "@/components/v1/molecules/portfolio/portfolioItem/portfolioItem";
-import toRem from "@/style/utils/toRem";
+import toRem from "@/style/v1/utils/toRem";
 import { useEffect, useRef } from "react";
-import { realColor } from "@/style/theme/theme";
+import { realColor } from "@/style/v1/theme/theme";
 
 const portfolioList = [
   {

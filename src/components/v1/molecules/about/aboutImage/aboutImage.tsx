@@ -1,8 +1,8 @@
 import Image from "@/components/v1/atoms/common/image/image";
 import Layout from "@/components/v1/atoms/common/layout/layout";
-import toRem from "@/style/utils/toRem";
+import toRem from "@/style/v1/utils/toRem";
 import Profile from "@/assets/v1/images/profile.png";
-import { realColor } from "@/style/theme/theme";
+import { realColor } from "@/style/v1/theme/theme";
 import { useRef } from "react";
 import useFadeUpRef from "@/hooks/useFadeUpRef/useFadeUpRef";
 

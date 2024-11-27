@@ -1,9 +1,9 @@
 "use client";
 import Title from "@/components/v1/atoms/common/title/title";
-import toRem from "@/style/utils/toRem";
+import toRem from "@/style/v1/utils/toRem";
 import BackgroundTextSVG from "./backgroundTextSVG";
 import BackgroundTextStyle from "./backgroundText.style";
-import { realColor } from "@/style/theme/theme";
+import { realColor } from "@/style/v1/theme/theme";
 import { forwardRef, useEffect, useRef } from "react";
 
 const BackgroundText = forwardRef<HTMLDivElement>((_, ref) => {
