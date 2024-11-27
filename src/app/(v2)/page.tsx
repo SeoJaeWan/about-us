@@ -1,10 +1,14 @@
+import Information from "@/components/v2/atoms/common/information";
+import Section from "@/components/v2/atoms/common/section";
+import HeroTitle from "@/components/v2/atoms/home/heroTitle";
+
 const Home = () => {
   return (
     <main>
-      <section>
-        <p>Never calling it done,</p>
-        <p>always enjoying updates</p>
-      </section>
+      <Section>
+        <HeroTitle />
+        <Information />
+      </Section>
 
       <section></section>
     </main>

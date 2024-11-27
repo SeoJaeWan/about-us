@@ -5,7 +5,7 @@ import Logo from "../../common/logo/logo";
 import Content from "@/components/v1/atoms/common/content/content";
 import ToGo from "@/components/v1/atoms/common/toGo/toGo";
 import { useRef } from "react";
-import useFadeUpRef from "@/hooks/useFadeUpRef/useFadeUpRef";
+import useFadeUpRef from "@/hooks/v1/useFadeUpRef/useFadeUpRef";
 import { realColor } from "@/style/v1/theme/theme";
 
 const AboutContent = () => {

@@ -7,7 +7,7 @@ import PortfolioItemStyle from "./portfolioItem.style";
 import toRem from "@/style/v1/utils/toRem";
 import { realColor } from "@/style/v1/theme/theme";
 import { useRef } from "react";
-import useFadeUpRef from "@/hooks/useFadeUpRef/useFadeUpRef";
+import useFadeUpRef from "@/hooks/v1/useFadeUpRef/useFadeUpRef";
 
 type PortfolioItemProps = {
   info: {

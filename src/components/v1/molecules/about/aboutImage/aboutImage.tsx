@@ -4,7 +4,7 @@ import toRem from "@/style/v1/utils/toRem";
 import Profile from "@/assets/v1/images/profile.png";
 import { realColor } from "@/style/v1/theme/theme";
 import { useRef } from "react";
-import useFadeUpRef from "@/hooks/useFadeUpRef/useFadeUpRef";
+import useFadeUpRef from "@/hooks/v1/useFadeUpRef/useFadeUpRef";
 
 const AboutImage = () => {
   const boxRef = useRef();

@@ -1,4 +1,4 @@
-import StyledComponentsRegistry from "@/lib/registry";
+import StyledComponentsRegistry from "@/lib/v2/registry";
 
 const Layout = ({ children }) => {
   return (
